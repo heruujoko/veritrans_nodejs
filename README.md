@@ -9,10 +9,10 @@ I assume you have registered in veritrans and have a sandbox account. If you don
 ```javascript
 var Veritrans = require('./veritrans.js');
 var vt = new Veritrans('my-server-key'); //replace that with your server key
-vt.setCustomerDetails(req.user.user_name , "" , req.user.user_email , "");
-vt.setItemDetails(pays.payment_hash_id,pays.job_name,pays.payment_price);
-vt.setPrice(pays.payment_price);
-vt.setOrderID(pays.payment_hash_id);
+vt.setCustomerDetails("first_name" , "last_name" , "email" , "phone");
+vt.setItemDetails("id",25000);
+vt.setPrice(25000);
+vt.setOrderID("id");
 vt.getChargeURL(function(payment_url){
     var URL = payment_url; //at this point variable contain URL that can be used to redirect.	
 });
